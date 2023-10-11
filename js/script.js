@@ -6,7 +6,7 @@
 const quotes = [
     { 
         quote: "Success is not final, failure is not fatal: it is the courage to continue that counts.", 
-        source:" Winston S. Churchill" 
+        source:" Winston Churchill" 
     },
     { 
         quote: "Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.", 
@@ -72,13 +72,10 @@ function getRandomQuote() {
  * `printQuote` function
 ***/
 function printQuote() {
-   //console.log(getRandomQuote());
-
    let item = getRandomQuote();
 
    if (item)
    {
-
         document.getElementsByClassName("quote")[0].innerText = item.quote;
 
         var sourcep = document.getElementsByClassName("source")[0];
