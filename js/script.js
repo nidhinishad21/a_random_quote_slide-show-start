@@ -1,5 +1,3 @@
-/******************************************
-*****************************************/
 /***
  * `quotes` array
 ***/
@@ -9,19 +7,19 @@ const quotes = [
         source:" Winston Churchill" 
     },
     { 
-        quote: "Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.", 
-        source: " Albert Einstein" 
+        quote: "The only true wisdom is in knowing you know nothing.", 
+        source: " Socrates" 
     },
     { 
         quote: "Some infinities are bigger than other infinities.", 
         source: " John Green",
-        citation:"The Fault in Our Stars" 
+        citation:" The Fault in Our Stars" 
     },
     { 
         quote: "It is our choices, Harry, that show what we truly are, far more than our abilities.", 
         source: " J.K. Rowling", 
         citation: "Harry Potter and the Chamber of Secrets",
-        year: "1998"
+        year: " 1998"
     },
     { 
         quote: "Logic will get you from A to Z; imagination will get you everywhere.",
@@ -40,14 +38,14 @@ const quotes = [
         source: " Oscar Wilde" 
     },
     { 
-        quote: "Live as if you were to die tomorrow. Learn as if you were to live forever.", 
-        source: " Mahatma Gandhi" 
+        quote: " The only way to do great work is to love what you do." ,
+        source: " Steve Jobs" 
     },
     { 
         quote: "Without music, life would be a mistake.", 
         source: " Friedrich Nietzsche", 
-        citation:"Twilight of the Idols", 
-        year: "1889" 
+        citation:" Twilight of the Idols", 
+        year: " 1889" 
     }
      
 ];
@@ -57,6 +55,8 @@ const usedQuotes = [];
 
 /***
  * `getRandomQuote` function
+ * generates a random number within array length range and returns the quote element on that index. Then, it deletes the quote
+ *  from the array so that the quote is never repeated.
 ***/
 function getRandomQuote() {
 
@@ -70,6 +70,7 @@ function getRandomQuote() {
 
 /***
  * `printQuote` function
+ * This function puts the data into reppective HTML attributes.
 ***/
 function printQuote() {
    let item = getRandomQuote();
@@ -101,13 +102,13 @@ function printQuote() {
 
 }
 
-
+/**
+ * We want the script to run as soon as the page is loaded so that quotes from the array are loaded.
+ */
+document.addEventListener("DOMContentLoaded", printQuote);
 
 
 /***
- * click event listener for the print quote button
- * The code will look like the following. You need to complete it.
-
+ * click event listener for the print quote button.
 ***/
-document.addEventListener("DOMContentLoaded", printQuote);
 document.getElementById('load-quote').addEventListener("click", printQuote);
