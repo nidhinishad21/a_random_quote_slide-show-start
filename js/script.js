@@ -51,11 +51,10 @@ const quotes = [
 ];
 
 
-const usedQuotes = [];
 
 /***
  * `getRandomQuote` function
- * generates a random number within array length range and returns the quote element on that index. Then, it deletes the quote
+ *  Generates a random number within array length range and returns the quote element on that index. Then, it deletes the quote
  *  from the array so that the quote is never repeated.
 ***/
 function getRandomQuote() {
